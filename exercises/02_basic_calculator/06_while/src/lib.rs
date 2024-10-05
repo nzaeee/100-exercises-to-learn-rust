@@ -3,8 +3,14 @@ pub fn factorial(n: u32) -> u32 {
     // The `todo!()` macro is a placeholder that the compiler
     // interprets as "I'll get back to this later", thus
     // suppressing type errors.
-    // It panics at runtime.
-    todo!()
+    // It panics at runtime if you run the code.
+    let mut i = 1;
+    let mut factorial = 1;
+    while i <= n {
+        factorial *= i;
+        i += 1;
+    }
+    factorial
 }
 
 #[cfg(test)]
